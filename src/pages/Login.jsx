@@ -14,9 +14,35 @@ return (
 <div className="min-h-screen bg-gray-100 flex items-center justify-center px-6 py-10"
 style={{ backgroundImage: "url('/bg.png')" }}>
 
-<h1 className="absolute top-6 left-8 text-2xl font-bold text-teal-300">
-aps
-</h1>
+<div className="absolute top-6 left-6 right-6 z-50 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+
+  {/* Logo */}
+  <h1
+    onClick={() => navigate("/")}
+    className="text-2xl font-bold text-teal-300 cursor-pointer"
+  >
+    aps
+  </h1>
+
+  {/* Navigation Links */}
+  <div className="flex gap-6 text-white font-medium text-sm md:text-base">
+    <span
+      onClick={() => navigate("/dashboard")}
+      className="cursor-pointer hover:text-teal-400"
+    >
+      Dashboard
+    </span>
+
+    <span
+      onClick={() => navigate("/scandetail")}
+      className="cursor-pointer hover:text-teal-400"
+    >
+      Scan Detail
+    </span>
+  </div>
+
+</div>
+
 
 <div className="flex flex-col lg:flex-row w-full max-w-6xl gap-10 lg:gap-20">
 
